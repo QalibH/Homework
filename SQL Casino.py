@@ -4,6 +4,15 @@ import random
 sq = sqlite3.connect('casino.db')
 sql = sq.cursor()
 
+sql.execute("""CREATE TABLE IF NOT EXISTS casino (
+                    
+    login VARCHAR (50),
+    password VARCHAR (50),
+    cash INT        
+            
+            )""")
+
+
 print('Welcome to the casino!')
 
 login = None  
